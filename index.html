@@ -41,8 +41,17 @@
 			<section class="business">
 				<div class="business-inside container">
 					<h1>Effective Solutions for Your Business</h1>
-					<button type="button" class="button-order">Order Service</button>
+					<button type="button" class="button-order" data-modal-open>Order Service</button>
 				</div>
+<div class="backdrop is-hidden" data-modal>
+	<div class="modal">
+		<button class="btn-close-modal" data-modal-close><svg width="24px" height="24px">
+			<use href="./images/btn-close-modal.svg"></use>
+		</svg>
+	</button>
+	</div>
+</div>
+
 			</section>
 			<section class="advantages">
 				<div class="container">
@@ -318,5 +327,6 @@
 				</ul>
 			</div>
 		</footer>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
