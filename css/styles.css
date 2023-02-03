@@ -146,6 +146,10 @@ footer .logo:visited {
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header-nav li.currentpage::after {
+	opacity: 1;
+}
+
 .header-nav li:hover::after {
 	opacity: 1;
 }
@@ -236,10 +240,11 @@ footer {
 	padding: 16px 32px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-order:hover {
 	background-color: var(--order-button-hover);
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -281,6 +286,21 @@ footer {
 	position: absolute;
 	right: 24px;
 	top: 24px;
+
+	width: 24px;
+	height: 24px;
+
+	background: var(--footer-text-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #000000;
+
+	cursor: pointer;
 }
 
 .advantages {
@@ -519,8 +539,8 @@ footer {
 	color: var(--footer-logo-color);
 }
 
-.item:hover .overlay,
-.item:focus .overlay {
+.card-link:hover .overlay,
+.card-link:focus .overlay {
 	transform: translateY(0);
 }
 
@@ -555,7 +575,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-icons-svg {
@@ -567,7 +587,6 @@ footer {
 .custom-icons:active,
 .custom-icons:focus {
 	color: var(--icons-after);
-	border: 1px solid var(--icons-after);
 }
 
 footer {
